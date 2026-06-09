@@ -1,4 +1,3 @@
-
 def get_tx_count(tx_list):
     """
     Return the number of transactions in the list.
@@ -26,7 +25,7 @@ def process_txids(tx_list):
     """
     result = []
     for idx, txid in enumerate(tx_list):
-        if not txid.startswith('tx'):
+        if not txid.startswith("tx"):
             continue
         result.append((idx, txid))
     return result
@@ -41,11 +40,13 @@ def example_while_loop(limit):
     """
     i = 0
     result = []
-    while i <= limit:
+
+    while i < limit:
         if i == 5:
             break
         result.append(i)
         i += 1
+
     return result
 
 
@@ -66,7 +67,7 @@ def dict_methods_example(block):
     Input: Dict
     Output: Tuple of (list, list, list)
     """
-    return (list(block.keys()), list(block.values()), list(block.items()))
+    return list(block.keys()), list(block.values()), list(block.items())
 
 
 def multiple_assignment(a, b):
@@ -76,7 +77,7 @@ def multiple_assignment(a, b):
     Output: Tuple of two ints (swapped)
     """
     a, b = b, a
-    return (a, b)
+    return a, b
 
 
 def set_example(addresses):
